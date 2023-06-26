@@ -1,0 +1,31 @@
+class zero{
+    public void arrangeZeros(int []arr)
+    {
+        int i=0;
+        int s=0;
+        while(i<arr.length)
+        {
+            if(arr[i]>0 || arr.length<0)
+            {
+                int t=arr[s];
+                arr[s]=arr[i];
+                arr[i]=t;
+                s++;
+            }
+            i++;
+        }
+
+    }
+}
+public class sortZeros {
+    public static void main(String[] args) {
+
+        int arr[]={0,1,0,3,1,2};
+        zero s=new zero();
+        s.arrangeZeros(arr);
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print( arr[i] +" ");
+        }
+    }
+}
